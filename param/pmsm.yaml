@@ -1,6 +1,6 @@
 # Parameters for time, randomness, environment, etc.
-tf: 1.0
-dt: 0.000001
+tf: 10.0
+dt: 0.0001
 seed: -1 # negative forces random seed
 
 
@@ -9,15 +9,15 @@ logname_true_state: /tmp/pmsm.log
 
 
 # Physical parameters
-motor_inductance: 13.0
-motor_resitance: 3.5
-motor_inertia: 0.27
+motor_inductance: 1.0
+motor_resistance: 1.0
+motor_inertia: 0.05
 motor_flux_constant: 1.0
 motor_poles: 7
 motor_static_friction_torque: 0.0
-motor_viscous_friction_constant: 0.001
-motor_load_torque: 0.0
-motor_load_inertia: 0.022
+motor_viscous_friction_constant: 0.0
+motor_load_torque: 0.05
+motor_load_inertia: 0.1
 
 
 # Controller

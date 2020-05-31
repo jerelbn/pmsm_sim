@@ -25,7 +25,10 @@ public:
     ~Motor();
 
     void load(const std::string &filename);
-    void update(const double &t, const double u[NI]);
+    void update(const double &t);
+    void computeControl(const double& t, const double& theta_c);
+
+    const double* getInput() const { return input; }
 
 private:
 
@@ -50,6 +53,13 @@ private:
     // State array and change
     double state[NS];
     double dstate[NS];
+
+    // PI controller
+    double ctrl_update_rate;
+    double input[NI], idq_c[NI];
+    common::PID<double> pid_d;
+    common::PID<double> pid_q;
+    common::PID<double> pid_theta;
 
     common::Logger logger;
 };
