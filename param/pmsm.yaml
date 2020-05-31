@@ -16,7 +16,7 @@ motor_flux_constant: 1.0
 motor_poles: 7
 motor_static_friction_torque: 0.01
 motor_viscous_friction_constant: 0.02
-motor_load_torque: 0.3
+motor_load_torque: 0.1
 motor_load_inertia: 0.22
 
 

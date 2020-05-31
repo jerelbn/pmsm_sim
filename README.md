@@ -10,5 +10,5 @@ Simulation of 3-phaes, brushless, DC motor.
 
 ## Build without VSCode
 - Create build directory: `mkdir build`
-- Initialize CMake: `cmake ..`
+- Initialize CMake: `cd build/ && cmake ..`
 - Compile: `make`

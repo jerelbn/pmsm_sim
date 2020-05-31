@@ -29,8 +29,8 @@ public:
 
 private:
 
-    static void f(const double x[NS], const double u[NI], double dx[NS]);
-    void log(const double &t) const;
+    void f(const double x[NS], const double u[NI], double dx[NS]);
+    void log(const double &t);
 
     double t_prev; // previous timestamp
 
@@ -47,8 +47,9 @@ private:
     double Tl; // load torque
     double Jl; // load inertia
 
-    // State array
+    // State array and derivative
     double state[NS];
+    double state_dot[NS];
 
-    common::Logger state_log_;
+    common::Logger logger;
 };
