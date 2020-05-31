@@ -1,0 +1,32 @@
+# Parameters for time, randomness, environment, etc.
+tf: 0.1
+dt: 0.000001
+seed: -1 # negative forces random seed
+
+
+# Log filenames
+logname_true_state: /tmp/pmsm.log
+
+
+# Physical parameters
+motor_inductance: 13.0
+motor_resitance: 3.5
+motor_inertia: 0.27
+motor_flux_constant: 1.0
+motor_poles: 7
+motor_static_friction_torque: 0.01
+motor_viscous_friction_constant: 0.02
+motor_load_torque: 0.3
+motor_load_inertia: 0.22
+
+
+# Controller
+ctrl_update_rate: 500
+
+
+# Rotary encoders
+encoder_enabled: false
+encoder_use_truth: false
+encoder_update_rate: 100
+encoder_noise_stdev: 0.001
+encoder_resolution: 1024 # number of rotary encoder ticks per revolution

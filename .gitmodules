@@ -1,0 +1,3 @@
+[submodule "lib/common_cpp"]
+	path = lib/common_cpp
+	url = git@github.com:jerelbn/common_cpp.git
