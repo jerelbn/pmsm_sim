@@ -47,9 +47,9 @@ private:
     double Tl; // load torque
     double Jl; // load inertia
 
-    // State array and derivative
+    // State array and change
     double state[NS];
-    double state_dot[NS];
+    double dstate[NS];
 
     common::Logger logger;
 };

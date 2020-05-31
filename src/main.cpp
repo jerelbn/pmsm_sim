@@ -24,7 +24,7 @@ int main()
     while (t <= tf+dt)
     {
         // Update motor control, state, etc.
-        double u[] = {0.0, 0.0};
+        double u[] = {0.0, 1.0};
         motor.update(t, u);
 
         // Update time step

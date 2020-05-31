@@ -1,5 +1,5 @@
 # Parameters for time, randomness, environment, etc.
-tf: 0.1
+tf: 1.0
 dt: 0.000001
 seed: -1 # negative forces random seed
 
@@ -14,10 +14,10 @@ motor_resitance: 3.5
 motor_inertia: 0.27
 motor_flux_constant: 1.0
 motor_poles: 7
-motor_static_friction_torque: 0.01
-motor_viscous_friction_constant: 0.02
-motor_load_torque: 0.1
-motor_load_inertia: 0.22
+motor_static_friction_torque: 0.0
+motor_viscous_friction_constant: 0.001
+motor_load_torque: 0.0
+motor_load_inertia: 0.022
 
 
 # Controller

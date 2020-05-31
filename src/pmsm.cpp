@@ -1,6 +1,6 @@
 #include "pmsm.h"
 
-Motor::Motor() : t_prev{},L{},R{},Jm{},lam{},np{},Tsf{},mu{},Tl{},Jl{},state{},state_dot{} {}
+Motor::Motor() : t_prev{},L{},R{},Jm{},lam{},np{},Tsf{},mu{},Tl{},Jl{},state{},dstate{} {}
 
 Motor::Motor(const std::string &filename) : t_prev{},L{},R{},Jm{},lam{},np{},Tsf{},mu{},Tl{},Jl{},state{} {
     load(filename);
@@ -39,11 +39,11 @@ void Motor::update(const double &t, const double u[NI])
                                         std::placeholders::_1,
                                         std::placeholders::_2,
                                         std::placeholders::_3),
-                                      dt, state, u, state_dot);
-        state[ID] += state_dot[ID];
-        state[IQ] += state_dot[IQ];
-        state[THETA] += state_dot[THETA];
-        state[OMEGA] += state_dot[OMEGA];
+                                        dt, state, u, dstate);
+        state[ID] += dstate[ID];
+        state[IQ] += dstate[IQ];
+        state[THETA] += dstate[THETA];
+        state[OMEGA] += dstate[OMEGA];
     }
 
     log(t);
